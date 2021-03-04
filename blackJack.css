@@ -1,0 +1,157 @@
+/* I also built my own CSS for Painting the cards */
+
+/* General Stiling */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+/* Card Stiling */
+
+.card{
+    /* Dimension */
+    min-width: 100px;
+    min-height: 150px;
+    /* Font Properties */
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    /* Border Margin Padding */
+    border: 3px solid #ffcc33;
+    border-radius: 15px;
+    margin: 5px 5px;
+    padding: 10px;
+    /* FLEXBOX */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card div{
+    font-size: 50px;
+}
+
+/* Suit Stiling */
+
+.card-hearts{
+    color:#800000;
+}
+.card-diamonds{
+    color: #800000;
+}
+.card-spades{
+    color:#050301;
+}
+.card-clubs{
+    color:#050301;
+}
+
+/* Dealer and Player Containers Stiling */
+
+/* A simple flex Container */
+
+#dealerContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#playerContainer{
+    display: flex;
+    justify-content: center;
+}
+
+/* Dealr's First Card Must Be Face Down Until "Player" Stays or Busts */
+
+#dealerContainer > :first-child{
+    background-color: #ffcc33;
+}
+
+#dealerContainer > :first-child > *{
+    display: none;
+}
+
+
+
+/* Player Control Buttons Stiling */
+
+#playerControlButtons{
+    /* FlexBox Properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Margin and Padding */
+    margin-top: 25px;
+}
+
+#balance{
+    margin-right: 10px;
+}
+
+#playerControlButtons button{
+    /* Removing Default Stiling */
+    outline: none;
+    /* Colors */
+    background-color: white;
+    color: #ffcc33;
+    /* Border */
+    border: 2px solid #ffcc33;border: 2px solid #ffcc33;
+    border-radius: 15px;
+    /* Margin and Padding */
+    margin: 0px 10px;
+    padding: 20px;
+    /* Font */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#restartButton{
+    /* Removing Default Stiling */
+    outline: none;
+    /* Colors */
+    background-color: white;
+    color: #ffcc33;
+    /* Border */
+    border: 2px solid #ffcc33;
+    border-radius: 15px;
+    /* Margin and Padding */
+    margin: 20px auto;
+    padding: 20px;
+    /* Font */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#restartButton:hover{
+        /* Colors */
+        background-color: #ffcc33;
+        color:white;
+}
+
+#playerControlButtons button:hover{
+    /* Colors */
+    background-color: #ffcc33;
+    color:white;
+}
+
+/* Game Board Stiling */
+
+#gameBoard{
+    height: 80vh;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: auto 0px;
+
+}
+
+
